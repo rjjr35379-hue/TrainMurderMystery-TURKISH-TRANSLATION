@@ -44,7 +44,6 @@ public class TrainMurderMystery implements ModInitializer {
 
 // TODO: Add tasks
 // TODO: Add temp jamming doors with lockpick
-// TODO: Remove survival UI
 // TODO: Add snack cabinet
 // TODO: Add drink cabinet
 // TODO: Add instinct

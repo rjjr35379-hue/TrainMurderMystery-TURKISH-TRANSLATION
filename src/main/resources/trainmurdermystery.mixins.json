@@ -20,6 +20,7 @@
     "client.KeyBindingMixin",
     "client.MinecraftClientMixin",
     "client.PlayerEntityRendererMixin",
+    "client.TooltipBackgroundRendererMixin",
     "client.WorldRendererMixin"
   ]
 }
