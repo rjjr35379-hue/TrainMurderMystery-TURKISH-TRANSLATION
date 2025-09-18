@@ -401,12 +401,6 @@ public class TMMGameLoop {
             list4.addAll(list3);
             List<BlockInfo> list5 = Lists.reverse(list4);
 
-            for (BlockInfo blockInfo : list5) {
-                BlockEntity blockEntity3 = serverWorld.getBlockEntity(blockInfo.pos);
-                Clearable.clear(blockEntity3);
-                serverWorld.setBlockState(blockInfo.pos, Blocks.BARRIER.getDefaultState(), Block.NOTIFY_LISTENERS | Block.FORCE_STATE);
-            }
-
             for (BlockInfo blockInfo2 : list2) {
                 BlockEntity blockEntity4 = serverWorld.getBlockEntity(blockInfo2.pos);
                 if (blockInfo2.blockEntityInfo != null && blockEntity4 != null) {
