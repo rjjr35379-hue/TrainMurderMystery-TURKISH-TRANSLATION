@@ -155,14 +155,11 @@ public class TMM implements ModInitializer {
 // TORECORD: Ringable horn, triggers game start in lobby
 // TORECORD: Players collide with each other (Amy) + let's you step on them
 // TORECORD: System that remembers previous roles and allows cycling of roles (Amy)
+// TORECORD: Game start and end messages
 
 // TODO: fix name and note render over each other if your cursor sees both
 // TODO: small video tutorial on how to play
 // TODO: Ability to customize time of day for supporters + snow density
 // TODO: Initial discovery mode
-// TODO: Both skeleton and body have the outline, only have it on skeleton
-// TODO: Spectators can see time left
-// TODO: Fix train horn
-// TODO: Fix hands
 // TODO: round start menu
 // TODO: round end message (reveal all roles and who started with guns)
