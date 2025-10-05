@@ -126,11 +126,11 @@
 		],
 		"subtitle": "subtitles.item.revolver.shoot"
 	},
-	"item.revolver.spin": {
+	"item.derringer.reload": {
 		"sounds": [
-			"trainmurdermystery:item/revolver_spin"
+			"trainmurdermystery:item/derringer_reload"
 		],
-		"subtitle": "subtitles.item.revolver.spin"
+		"subtitle": "subtitles.item.derringer.reload"
 	},
 	"item.bat.hit": {
 		"sounds": [

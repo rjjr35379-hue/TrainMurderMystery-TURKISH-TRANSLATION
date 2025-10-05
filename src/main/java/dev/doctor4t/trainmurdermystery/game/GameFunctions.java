@@ -9,7 +9,6 @@ import dev.doctor4t.trainmurdermystery.index.TMMDataComponentTypes;
 import dev.doctor4t.trainmurdermystery.index.TMMEntities;
 import dev.doctor4t.trainmurdermystery.index.TMMItems;
 import dev.doctor4t.trainmurdermystery.index.TMMSounds;
-import dev.doctor4t.trainmurdermystery.index.tag.TMMItemTags;
 import dev.doctor4t.trainmurdermystery.util.AnnounceEndingPayload;
 import dev.doctor4t.trainmurdermystery.util.AnnounceWelcomePayload;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
@@ -25,7 +24,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -313,9 +311,10 @@ public class GameFunctions {
             // replenish derringer
             for (List<ItemStack> list : killer.getInventory().combinedInventory) {
                 for (ItemStack stack : list) {
-                    if (stack.isOf(TMMItems.DERRINGER)) {
+                    Boolean used = stack.get(TMMDataComponentTypes.USED);
+                    if (stack.isOf(TMMItems.DERRINGER) && used != null && used) {
                         stack.set(TMMDataComponentTypes.USED, false);
-                        killer.playSoundToPlayer(TMMSounds.ITEM_REVOLVER_SPIN, SoundCategory.PLAYERS, 1.0f, 1.0f);
+                        killer.playSoundToPlayer(TMMSounds.ITEM_DERRINGER_RELOAD, SoundCategory.PLAYERS, 1.0f, 1.0f);
                     }
                 }
             }
