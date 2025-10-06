@@ -178,6 +178,7 @@ public class TMM implements ModInitializer {
 // TORECORD: Notes for some / every civilian
 // TORECORD: Grenades kill killers
 // TORECORD: Get put in a vc group when dead
+// TORECORD: Ability to wake up players
 // TORECORD: Final gamemode, loose ends:
 // - Everyone spawns on the train with nothing but a crowbar
 // - One minute into the game, everyone is given a derringer (one bullet) and a bat
@@ -189,7 +190,5 @@ public class TMM implements ModInitializer {
 // TODO: Watermark?
 
 
-// TODO: 
-// TODO: Ability to wake up players
 // TODO: Disable mounting chairs if already on one
 // TODO: wake up players before tping

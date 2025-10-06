@@ -13,7 +13,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.passive.VillagerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
@@ -158,7 +157,7 @@ public class TrimmedBedBlock extends BedBlock {
             }
 
             if (state.get(OCCUPIED)) {
-                if (!this.wakeVillager(world, pos)) {
+                if (!this.wakePlayers(world, pos)) {
                     player.sendMessage(Text.translatable("block.minecraft.bed.occupied"), true);
                 }
 
@@ -174,8 +173,8 @@ public class TrimmedBedBlock extends BedBlock {
         }
     }
 
-    private boolean wakeVillager(World world, BlockPos pos) {
-        List<VillagerEntity> list = world.getEntitiesByClass(VillagerEntity.class, new Box(pos), LivingEntity::isSleeping);
+    private boolean wakePlayers(World world, BlockPos pos) {
+        List<PlayerEntity> list = world.getEntitiesByClass(PlayerEntity.class, new Box(pos), LivingEntity::isSleeping);
         if (list.isEmpty()) {
             return false;
         } else {
